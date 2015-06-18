@@ -24,9 +24,9 @@ import java.util.ArrayList;
  * A helper class to enable automatically resizing {@link TextView}`s {@code textSize} to fit
  * within its bounds.
  *
- * @attr ref R.styleable.AutofitTextView_sizeToFit
- * @attr ref R.styleable.AutofitTextView_minTextSize
- * @attr ref R.styleable.AutofitTextView_precision
+ * @attr ref R.styleable.AutofitTextView_atv_sizeToFit
+ * @attr ref R.styleable.AutofitTextView_atv_minTextSize
+ * @attr ref R.styleable.AutofitTextView_atv_precision
  */
 public class AutofitHelper {
 
@@ -71,10 +71,10 @@ public class AutofitHelper {
                     R.styleable.AutofitTextView,
                     defStyle,
                     0);
-            sizeToFit = ta.getBoolean(R.styleable.AutofitTextView_sizeToFit, sizeToFit);
-            minTextSize = ta.getDimensionPixelSize(R.styleable.AutofitTextView_minTextSize,
+            sizeToFit = ta.getBoolean(R.styleable.AutofitTextView_atv_sizeToFit, sizeToFit);
+            minTextSize = ta.getDimensionPixelSize(R.styleable.AutofitTextView_atv_minTextSize,
                     minTextSize);
-            precision = ta.getFloat(R.styleable.AutofitTextView_precision, precision);
+            precision = ta.getFloat(R.styleable.AutofitTextView_atv_precision, precision);
             ta.recycle();
 
             helper.setMinTextSize(TypedValue.COMPLEX_UNIT_PX, minTextSize)
